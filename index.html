@@ -11,61 +11,92 @@
   <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Welcome to GoldRoad U1</h1>
-  <p>This is the beginning of the simplest and most advanced business website. The website has an aim of simplifying appointments made by/sent to groups, individuals or businesses from all over the world.</p>
-  <p>The version you are using is the first ever release of the website. For updates, ideas, feedback or more information, please stay tuned and keep an eye on the latest developments or contact us on the links provided. We hope you enjoy your experience with our platform!</p>
-  <p>May God bless you!</p>
-
-  <!-- GoldRoad U1 Booking & Chat Container -->
-<div class="goldroad-container">
-  
-  <!-- Main Trigger Button -->
-  <button id="mainBookingBtn" class="gold-trigger-btn">
-    <span class="btn-text">Book An Appointment</span>
-    <span class="btn-icon">▼</span>
-  </button>
-  
-  <!-- Collapsible Panel -->
-  <div id="bookingPanel" class="collapsible-panel">
-    
-    <!-- 1. Google Calendar Official Button -->
-    <div class="calendar-section">
-      <p class="section-label">Step 1: Pick your time</p>
-      <!-- Your Google Calendar Code Integrated Below -->
-      <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-      <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-      <script>
-      (function() {
-        var target = document.currentScript;
-        window.addEventListener('load', function() {
-          calendar.schedulingButton.load({
-            url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3aq0ciX5EWDlsm9piUxXIQQWLEhhqRteE84zIylQKQ49zBvREJXJpLJSEb2lfnpJhp3PsFtXcS?gv=true',
-            color: '#D4AF37',
-            label: 'Open Booking Calendar',
-            target,
-          });
-        });
-      })();
-      </script>
+  <div class="text-box">
+    <h1>Welcome to GoldRoad U1</h1>
+      <p>This is the beginning of the simplest and most advanced business website. The website has an aim of simplifying appointments made by/sent to groups, individuals or businesses from all over the world.</p>
+      <p>The version you are using is the first ever release of the website. For updates, ideas, feedback or more information, please stay tuned and keep an eye on the latest developments or contact us on the links provided. We hope you enjoy your experience with our platform!</p>
+      <p>May God bless you!</p>
     </div>
 
-    <!-- 2. Private Email Chat Box -->
-    <div class="chat-section">
-      <p class="section-label">Step 2: Private Follow-up</p>
-      <div class="chat-bubble">
-        <p>Once booked, drop your Google email here so I can send the consultation brief.</p>
-        <form id="emailCaptureForm">
-          <input type="email" id="clientEmail" placeholder="yourname@gmail.com" required>
-          <button type="submit" id="sendEmailBtn">Send</button>
-        </form>
-        <div id="formFeedback" class="success-msg hidden">Sent! I'll reach out shortly.</div>
-      </div>
-    </div>
-    
-  </div>
+
+
+<div>
+  <button id="consultationBtn">Submit A Free Consultation</button>
 </div>
+
+<div>
+  <button id="appointmentBtn">Book An Appointment</button>
+</div>
+
+<script>
+  function redirectWithDelay(url) {
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "white";
+    document.body.style.fontFamily = "Doto, sans-serif";
+    document.body.style.textAlign = "center";
+    document.body.style.paddingTop = "20%";
+
+    // First go to a temporary page
+    document.body.innerHTML = "<h2>Redirecting you in 3 seconds time...</h2><p>***</p>";
+    setTimeout(() => {
+      window.location.href = url;
+    }, 3000); // 3 seconds
+  }
+
+  document.getElementById("consultBtn").addEventListener("click", () => {
+    redirectWithDelay("consultation.html"); // your detailed consultation page
+  });
+
+  document.getElementById("appointmentBtn").addEventListener("click", () => {
+    redirectWithDelay("appointment.html"); // your detailed appointment page
+  });
+</script>
+
+<!-- Scripts -->
+<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+<script>
+  window.addEventListener('load', function() {
+    calendar.schedulingButton.load({
+      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3aq0ciX5EWDlsm9piUxXIQQWLEhhqRteE84zIylQKQ49zBvREJXJpLJSEb2lfnpJhp3PsFtXcS?gv=true',
+      color: '#3F51B5',
+      label: 'Book an appointment',
+      target: document.getElementById('appointmentBtn')
+    });
+  });
+</script>
+
+<button id="aboutBtn">About The Developer</button>
+<div id="aboutSection" style="display:none;">
+  <p>I am so glad to have you here as one of the very first members of this platform! My full names are Ryan Makori Kadenge. I'm currently turning 19 years old and am also currently a student at Moringa School in Nairobi, Kenya.</p>
+  <p>I've had a deep interest in the tech industry and have been following it's development, having learning Computer Science in my high school years and experimenting with certain apps, websites and even browsers.</p>
+  <p>The website you're on is a simple yet powerful tool I made and tested myself designed to simplify the process of booking appointments, reaching out to other members of the platform, linking social platforms easily and creating a conducive and collaborative business environment; whether it's an individual wanting to secure a job or start and publish his/her own business, a group that's made to share their ideas with others, a running business wanting to hire suitable candidates or an organisation advertising their goods or services, this platform is just for you.</p>
+  <p>For any help regarding this platform, the contact information is available below or you can consult me directly on the first button. My main goal is to be a software developer and to create solutions that will make life easier for people. I have a passion for learning and am always looking for new challenges to improve my skills. I am excited to see where this journey takes me and the impact I can make in the tech industry. May God bless you and have a nice day!</p>
+</div>
+
+<button id="contactBtn">Contact Information</button>
+<div id="contactSection" style="display:none;">
+  <p>WhatsApp: https://chat.whatsapp.com/CKGBkfXsSBs9LvWwQodNsa</p>
+  <p>Google Groups Email: https://groups.google.com/g/goldroadu1</p>
+  <p>LinkedIn: www.linkedin.com/in/ryan-makori-2a50563ba</p>
+</div>
+
+<script>
+  document.getElementById("aboutBtn").addEventListener("click", () => {
+    const section = document.getElementById("aboutSection");
+    section.style.display = section.style.display === "none" ? "block" : "none";
+  });
+
+  document.getElementById("contactBtn").addEventListener("click", () => {
+    const section = document.getElementById("contactSection");
+    section.style.display = section.style.display === "none" ? "block" : "none";
+  });
+</script>
+
+<footer>
+  <p>&copy; 2026 GoldRoad | Built by Ryan Makori | All Rights Reserved</p>
 
     <script src="script.js"></script>
 
-  </body>
+</body>
 </html>
