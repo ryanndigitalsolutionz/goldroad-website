@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GoldRoad Appointment</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Doto, sans-serif;
+      text-align: center;
+      background: repeating-linear-gradient(
+        45deg,
+        #006400,   /* deep green */
+        #006400 20px,
+        #D4AF37 20px, /* gold */
+        #D4AF37 40px
+      ); /* green and gold swirly stripes */
+    }
+
+    .calendar-frame {
+      margin: 40px auto;
+      width: 90%;
+      max-width: 900px;
+      border: 8px solid #888; /* gray ripple edge */
+      border-radius: 25px;
+      padding: 10px;
+      box-shadow: 0 0 25px rgba(136, 136, 136, 0.7);
+      background: repeating-linear-gradient(
+        135deg,
+        #f9f9f9,
+        #f9f9f9 15px,
+        #e0e0e0 15px,
+        #e0e0e0 30px
+      ); /* subtle ripple effect inside frame */
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 15px;
+    }
+
+    h2 {
+      color: white;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Book Your Appointment with GoldRoad</h2>
+  
+  <!-- Google Calendar Appointment Scheduling -->
+  <div id="calendarFrame" class="calendar-frame">
+    <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3aq0ciX5EWDlsm9piUxXIQQWLEhhqRteE84zIylQKQ49zBvREJXJpLJSEb2lfnpJhp3PsFtXcS?gv=true"
+            style="border:0"
+            width="100%"
+            height="600"
+            frameborder="0">
+    </iframe>
+  </div>
+</body>
+</html>

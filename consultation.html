@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GoldRoad Consultation</title>
+  <!-- Game-style font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: orange;
+      color: white;
+      font-family: 'Orbitron', sans-serif;
+      text-align: center;
+      padding-top: 10%;
+    }
+
+    /* Hexagonal frame */
+    .hex-frame {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 30px auto;
+      clip-path: polygon(
+        50% 0%, 93% 25%, 93% 75%, 
+        50% 100%, 7% 75%, 7% 25%
+      );
+      overflow: hidden;
+      border: 5px solid #D4AF37; /* gold border */
+      box-shadow: 0 0 15px rgba(212,175,55,0.6);
+    }
+    .hex-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #D4AF37; /* Gold */
+      color: black;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    a:hover {
+      background-color: #fff176; /* lighter gold */
+    }
+
+    h2, p {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hexagonal image -->
+  <div class="hex-frame">
+    <img src="https://copilot.microsoft.com/th/id/BCO.b43f1493-d518-48ef-847c-a954d4543657.png" alt="GoldRoad Logo">
+  </div>
+
+  <!-- Particle text headline -->
+  <h2 id="headline">Redirecting you to GoldRoad Group...</h2>
+  <p>Click below if it doesn’t open automatically.</p>
+
+  <!-- WhatsApp group link -->
+  <a href="https://chat.whatsapp.com/H5ftLPxL3kx7ikKcrY9SN3" target="_blank">
+    Join GoldRoad General Group on WhatsApp
+  </a>
+
+  <!-- Particle animation script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script>
+    const text = document.getElementById("headline");
+    const chars = text.textContent.split("");
+    text.textContent = "";
+
+    chars.forEach(char => {
+      const span = document.createElement("span");
+      span.textContent = char;
+      span.style.opacity = 0;
+      span.style.display = "inline-block";
+      span.style.transform = "translateX(-20px)";
+      text.appendChild(span);
+    });
+
+    gsap.to("#headline span", {
+      opacity: 1,
+      x: 0,
+      duration: 0.5,
+      stagger: 0.05,
+      ease: "power2.out"
+    });
+  </script>
+</body>
+</html>

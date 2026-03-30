@@ -1,3 +1,10 @@
+document.getElementById("consultationBtn").addEventListener("click", () => {
+  const frame = document.getElementById("consultationFrame");
+  frame.style.display = (frame.style.display === "none" || frame.style.display === "")
+    ? "block"
+    : "none";
+});
+
 document.getElementById('appointmentBtn').addEventListener('click', () => {
   const frame = document.getElementById('calendarFrame');
   frame.style.display = (frame.style.display === 'none' || frame.style.display === '') 
