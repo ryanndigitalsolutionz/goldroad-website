@@ -21,6 +21,40 @@ h1, p, div, footer {
   color: white;
 }
 
+.aboutSection,
+.contactSection {
+  text-align: center;   /* centers everything inside */
+  margin-top: 20px;
+}
+
+.aboutSection .gold-trigger-btn,
+.contactSection .gold-trigger-btn {
+  display: inline-block; /* prevents full-width stretching */
+  margin: 0 auto;        /* centers the button itself */
+}
+
+.aboutSection .panel,
+.contactSection .panel {
+  display: none;   /* hidden until button is clicked */
+  margin-top: 15px;
+  text-align: center;
+}
+
+.calendar-frame {
+  display: none; /* hidden until button is clicked */
+  margin-top: 20px;
+  border: 6px solid #D4AF37; /* Gold border */
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+  background: repeating-linear-gradient(
+    45deg,
+    #fff,
+    #fff 10px,
+    #f9f9f9 10px,
+    #f9f9f9 20px
+  ); /* ripple-like edge effect */
+}
 
 .collapsible-panel { display: none; }
 .collapsible-panel.active { display: block; }
