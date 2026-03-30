@@ -123,10 +123,15 @@ button, .gold-trigger-btn {
   transition: color 2s ease-in;
 }
 
-/* Homepage background */
-body {
+#landingScreen {
   background: url('https://copilot.microsoft.com/th/id/BCO.dc180493-b3da-46b9-8531-d456d3c0c5f6.png') no-repeat center center fixed;
   background-size: cover;
+}
+
+#mainContent {
+  background: url('https://copilot.microsoft.com/th/id/BCO.b43f1493-d518-48ef-847c-a954d4543657.png') no-repeat center center fixed;
+  background-size: cover;
+  display: none; /* stays hidden until Open Content is clicked */
 }
 
 /* Particle stream words */

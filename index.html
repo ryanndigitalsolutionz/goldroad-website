@@ -5,16 +5,14 @@
   <title>GoldRoad</title>
   <link rel="stylesheet" href="style.css">
 
-  <!-- Google Fonts (Oswald + Nunito + Doto) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 
-    <!-- GSAP for animations -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
   <style>
-    /* Landing screen */
+     /* Landing screen styles */
     .landing {
       position: fixed;
       top: 0; left: 0;
@@ -54,7 +52,6 @@
       background-color: #fff176;
     }
 
-    /* Particle stream overlay */
     #particleStream {
       position: absolute;
       bottom: 0;
@@ -68,12 +65,9 @@
       z-index: 5;
     }
 
-    /* Hide main content initially */
     #mainContent {
       display: none;
     }
-
-    /* Teal frame for buttons */
     .button-row {
       display: flex;
       justify-content: space-between;
@@ -102,9 +96,9 @@
   </style>
 </head>
 
+
 <body>
 
-  <!-- Landing screen -->
   <div class="landing" id="landingScreen">
     <h1>Welcome To GoldRoad U1</h1>
     <p>Opportunities Are Endless</p>
@@ -112,7 +106,6 @@
     <div id="particleStream"></div>
   </div>
 
-  <!-- Main content (hidden until Open Content is pressed) -->
   <div id="mainContent">
     <div class="text-box">
       <h1>Welcome to GoldRoad U1</h1>
@@ -121,7 +114,6 @@
       <p>May God bless you!</p>
     </div>
 
-    <!-- Four button row -->
     <div class="button-row">
       <button id="consultationBtn">Submit A Free Consultation</button>
       <button id="appointmentBtn">Book An Appointment</button>
@@ -129,8 +121,11 @@
       <button id="contactBtn">Contact Information</button>
     </div>
 
+  
+
     <div class="free-consultation" id="consultationSection" style="display:none;">
-      <script>
+
+        <script>
   function redirectWithDelay(url) {
     // Replace the whole page content with a redirect screen
     document.body.style.backgroundColor = "black";
@@ -149,7 +144,7 @@
   }
 
   // Consultation button → consultation.html
-  document.getElementById("consultBtn").addEventListener("click", () => {
+  document.getElementById("consultationBtn").addEventListener("click", () => {
     redirectWithDelay("consultation.html");
   });
 
@@ -211,11 +206,6 @@
       <a href="https://groups.google.com/g/goldroadu1" target="_blank">Google Groups</a> |
       <a href="https://chat.whatsapp.com/CKGBkfXsSBs9LvWwQodNsa" target="_blank">WhatsApp</a>
     </div>
-
-    <footer>
-      <p>&copy; 2026 GoldRoad | Built by Ryan Makori | All Rights Reserved</p>
-    </footer>
-  </div>
 
   <!-- Scripts -->
   <script>
