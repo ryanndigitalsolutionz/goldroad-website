@@ -18,7 +18,7 @@ h1, p, div, footer {
   opacity: 0.85; /* slightly transparent */
   padding: 20px;
   border-radius: 10px;
-  color: white;
+  color: rgb(255, 225, 0);
 }
 
 .aboutSection,
@@ -121,4 +121,50 @@ button, .gold-trigger-btn {
 .open-btn.loaded {
   color: gold;                  /* golden text appears */
   transition: color 2s ease-in;
+}
+
+/* Homepage background */
+body {
+  background: url('https://copilot.microsoft.com/th/id/BCO.dc180493-b3da-46b9-8531-d456d3c0c5f6.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Particle stream words */
+#particleStream span {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.2em;
+  color: rgba(255, 255, 255, 0.4);
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+/* Open Content button */
+.open-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 40px;
+  background-color: teal;
+  color: transparent;
+  font-size: 1.2em;
+  border-radius: 12px;
+  border: 3px solid gold;
+  cursor: pointer;
+  font-weight: bold;
+  overflow: hidden;
+}
+.open-btn.loaded { color: gold; transition: color 2s ease-in; }
+
+/* Appointment calendar styling */
+.calendar-frame {
+  border: 6px solid gray;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(128,128,128,0.6);
+  background: repeating-linear-gradient(
+    45deg,
+    green,
+    gold 20px,
+    green 40px
+  );
 }

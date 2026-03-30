@@ -19,7 +19,7 @@
       position: fixed;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: url('https://copilot.microsoft.com/th/id/BCO.b43f1493-d518-48ef-847c-a954d4543657.png') no-repeat center center fixed;
+      background: url('https://copilot.microsoft.com/th/id/BCO.dc180493-b3da-46b9-8531-d456d3c0c5f6.png') no-repeat center center fixed;
       background-size: cover;
       display: flex;
       flex-direction: column;
@@ -35,17 +35,17 @@
       margin-bottom: 10px;
     }
     .landing p {
-      font-size: 1.2em;
-      color: white;
+      font-size: 2em;
+      color: rgb(17, 0, 255);
       margin-bottom: 30px;
     }
     .open-btn {
       padding: 15px 40px;
-      background-color: #D4AF37;
-      color: black;
+      background-color: teal;
+      color: gold;
       font-size: 1.2em;
       border: none;
-      border-radius: 10px;
+      border-radius: 20px;
       cursor: pointer;
       font-weight: bold;
       transition: 0.3s;
@@ -129,6 +129,33 @@
       <button id="contactBtn">Contact Information</button>
     </div>
 
+    <div class="free-consultation" id="consultationSection" style="display:none;">
+      <script>
+  function redirectWithDelay(url) {
+    // Replace the whole page content with a redirect screen
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "white";
+    document.body.style.fontFamily = "Oswald, sans-serif";
+    document.body.style.textAlign = "center";
+    document.body.style.paddingTop = "20%";
+
+    // Show redirect message + loading line
+    document.body.innerHTML = "<h2>Redirecting you in 3 seconds time...</h2><p>***</p>";
+
+    // After 3 seconds, go to the target page
+    setTimeout(() => {
+      window.location.href = url;
+    }, 3000);
+  }
+
+  // Consultation button → consultation.html
+  document.getElementById("consultBtn").addEventListener("click", () => {
+    redirectWithDelay("consultation.html");
+  });
+
+</script>
+    </div>
+
     <!-- Appointment section -->
     <div class="calendar-section" id="appointmentSection" style="display:none;">
       <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3aq0ciX5EWDlsm9piUxXIQQWLEhhqRteE84zIylQKQ49zBvREJXJpLJSEb2lfnpJhp3PsFtXcS?gv=true"
@@ -136,11 +163,45 @@
               width="100%"
               height="600"
               frameborder="0"></iframe>
+
+              <script>
+  function redirectWithDelay(url) {
+    // Replace the whole page content with a redirect screen
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "white";
+    document.body.style.fontFamily = "Oswald, sans-serif";
+    document.body.style.textAlign = "center";
+    document.body.style.paddingTop = "20%";
+
+    // Show redirect message + loading line
+    document.body.innerHTML = "<h2>Redirecting you in 3 seconds time...</h2><p>***</p>";
+
+    // After 3 seconds, go to the target page
+    setTimeout(() => {
+      window.location.href = url;
+    }, 3000);
+  }
+
+  // Appointment button → appointment.html
+  document.getElementById("appointmentBtn").addEventListener("click", () => {
+    redirectWithDelay("appointment.html");
+  });
+  
+</script>
     </div>
 
     <!-- About section -->
     <div class="aboutSection" id="aboutSection" style="display:none;">
-      <p>I am so glad to have you here as one of the very first members of this platform! My full names are Ryan Makori Kadenge...</p>
+      <p>I am so glad to have you here as one of the very first members of this platform! My full names are Ryan Makori Kadenge. I am currently turning 19 years and am also a current student at Moringa School, Nairobi, Kenya.
+</p>
+      <p>I've had a lot of interest in the tech industry and have been used to experiment on websites, apps and hardware devices in my early years. I have been studying Computer Science in high school for 4 years and have gotten well mostly in Frontend Development. I still have plans to learn more so I do want to learn Data Analytics and research more on AI Integration.
+</p>
+      <p>I am honest, understanding and gentle when it comes to businesses, friendships and even mutual connections, but I still have focus on my goals. I want to cooperate with people who want to become members and united communities of something greater. We need each other's support, collaboration and cooperation to build this platform as well as your businesses or finding better and more profitable.
+</p>
+      <p>If you wish to easily contact me; there are links to my helpline or profile pages at the "Contact Information" button provided, you can pick an appointment day on the "Book An Appointment" button to ask more about what I'm building or just any query regarding your work, debugging code or even receiving solutions for your business based on the problem or just join the WhatsApp link under the "Submit A Free Consultation" button to assist me in ways I can make this website better for everyone.
+</p>
+      <p>I hope we can keep in touch and receive more members to help grow this website. May God bless you and have a nice day.</p>
+      
     </div>
 
     <!-- Contact section -->
